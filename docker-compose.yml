@@ -1,0 +1,13 @@
+version: '3'
+services:
+  java:
+    container_name: ${APP_NAME:?err}-java
+    restart: 'always'
+    ports:
+      - ${JAVA_PORT:?err}:11111
+    build:
+      context: .
+      dockerfile: ./docker/java.Dockerfile
+    volumes:
+      - ./java/logs:/var/java/app/target/logs
+
