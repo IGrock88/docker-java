@@ -11,5 +11,9 @@ services:
     volumes:
       - ./java/logs:/var/java/app/target/logs
       - ./java/src/main/resources:/var/java/app/src/main/resources
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"  
       
 
