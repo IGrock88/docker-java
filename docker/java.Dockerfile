@@ -13,4 +13,4 @@ COPY --from=build /var/java/app/target /var/java/app/target
 
 WORKDIR /var/java/app/target
 
-CMD ["java", "-Dfile.encoding=UTF-8", "-Xms2048m", "-Xmx2048m", "-DdriverPath=/var/java/app/src/main/resources/libfptr10.so", "-DkktConfigPath=/var/java/app/kkt.json", "-DapiUrl=https://avtovokzal-on-line.ru/", "-jar", "AvKkt-1.0-jar-with-dependencies.jar"]
+CMD ["java", "-Dfile.encoding=UTF-8", "-Xms2048m", "-Xmx2048m", "-DdriverPath=/var/java/app/src/main/resources/libfptr10.so", "-DkktConfigPath=/var/java/app/src/main/resources/kkt.json", "-DapiUrl=https://avtovokzal-on-line.ru/", "-jar", "AvKkt-1.0-jar-with-dependencies.jar"]
